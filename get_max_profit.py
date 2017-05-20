@@ -5,7 +5,6 @@ class GetMaxProfit():
     def get_max_difference(self, values):
         max_diff = values[1] - values[0]
         min_price = values[0]
-        print(max_diff)
         for index, value in enumerate(values):
             if index > 0:
                 max_diff = max(max_diff, value - min_price)
