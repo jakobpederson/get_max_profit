@@ -8,11 +8,8 @@ class GetMaxProfit():
         print(max_diff)
         for index, value in enumerate(values):
             if index > 0:
-                if value - min_price > max_diff:
-                    max_diff = value - min_price
-                if min_price > value:
-                    min_price = value
-            print(max_diff)
+                max_diff = max(max_diff, value - min_price)
+                min_price = min(value, min_price)
         return max_diff
 
     def check_values_length(self, values):
