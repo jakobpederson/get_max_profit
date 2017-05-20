@@ -10,9 +10,6 @@ class GetMaxProfit():
                 max_diff = value - min_price
             if min_price > value:
                 min_price = value
-            print('value', value)
-            print('min_prince', min_price)
-            print('max_diff', max_diff)
         return max_diff
 
     def check_values_length(self, values):
