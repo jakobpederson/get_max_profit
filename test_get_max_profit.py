@@ -25,6 +25,5 @@ class GetMaxProfitTest(unittest.TestCase):
     def test_calculate_max_profit(self):
         result = self.calculator.calculate_max_profit(VALUES)
         result_one = self.calculator.calculate_max_profit(VALUES_ONE)
-        self.fail('x')
         self.assertEqual(EXPECTED, result)
         self.assertEqual('Error: not enough values', result_one)
