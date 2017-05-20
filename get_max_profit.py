@@ -3,9 +3,17 @@
 class GetMaxProfit():
 
     def get_max_difference(self, values):
-        differences = []
-        differences.extend(max([max([value - x for x in values] for value in values)]))
-        return max(differences)
+        max_diff = 0
+        min_price = values[0]
+        for value in values:
+            if value - min_price > max_diff:
+                max_diff = value - min_price
+            if min_price > value:
+                min_price = value
+            print('value', value)
+            print('min_prince', min_price)
+            print('max_diff', max_diff)
+        return max_diff
 
     def check_values_length(self, values):
         if len(values) >= 2:

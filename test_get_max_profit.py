@@ -1,7 +1,7 @@
 import unittest
 import get_max_profit
 
-VALUES = [10, 7, 5, 8, 11, 9]
+VALUES = [10, 7, 5, 8, 11, 9, 1, 0]
 VALUES_ONE = [10]
 EXPECTED = 6
 
@@ -25,5 +25,6 @@ class GetMaxProfitTest(unittest.TestCase):
     def test_calculate_max_profit(self):
         result = self.calculator.calculate_max_profit(VALUES)
         result_one = self.calculator.calculate_max_profit(VALUES_ONE)
+        self.fail('x')
         self.assertEqual(EXPECTED, result)
         self.assertEqual('Error: not enough values', result_one)
