@@ -4,8 +4,7 @@ class GetMaxProfit():
 
     def get_max_difference(self, values):
         differences = []
-        for value in values:
-            differences.append(max([value - x for x in values]))
+        differences.extend(max([max([value - x for x in values] for value in values)]))
         return max(differences)
 
     def check_values_length(self, values):
