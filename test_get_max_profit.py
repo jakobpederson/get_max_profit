@@ -3,6 +3,7 @@ import get_max_profit
 
 VALUES = [10, 7, 5, 8, 11, 9, 1, 0]
 VALUES_ONE = [10]
+VALUES_NEG = [10, 4]
 EXPECTED = 6
 
 
@@ -27,3 +28,7 @@ class GetMaxProfitTest(unittest.TestCase):
         result_one = self.calculator.calculate_max_profit(VALUES_ONE)
         self.assertEqual(EXPECTED, result)
         self.assertEqual('Error: not enough values', result_one)
+
+    def test_negative_profit(self):
+        result = self.calculator.calculate_max_profit(VALUES_NEG)
+        self.assertEqual(-6, result)
